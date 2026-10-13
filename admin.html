@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>تحرير بيانات المشروع</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div>
+      <h1>تحرير بيانات المشروع</h1>
+      <p>عدّل الحقول ثم اضغط حفظ</p>
+    </div>
+    <nav>
+      <a href="index.html">العرض</a>
+      <a href="admin.html" class="active">التحرير</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="toolbar">
+    <button onclick="saveForm()">💾 حفظ</button>
+    <button class="secondary" onclick="reloadForm()">↻ إعادة تحميل</button>
+    <button class="secondary" onclick="exportJSON()">⬇ تصدير JSON</button>
+  </div>
+  <div id="status" class="status"></div>
+  <form id="form"></form>
+</main>
+<script src="assets/js/labels.js"></script>
+<script src="assets/js/form.js"></script>
+</body>
+</html>

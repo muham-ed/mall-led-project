@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>مشروع واجهة مول LED — العرض والتصور 3D</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- Three.js & OrbitControls CDNs for Real WebGL 3D (Task 1) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+<!-- jsPDF & html2canvas CDNs for Real PDF Export (Task 6) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div>
+      <h1 id="pageTitle">تصميم واجهة مول تجاري عصري مع شاشات LED</h1>
+      <p id="pageSub">مشروع متكامل — تصورات 3D ومواصفات فنية كود SBC</p>
+    </div>
+    <nav>
+      <a href="index.html" class="active">العرض والتصور 3D</a>
+      <a href="admin.html">التحرير والإدارة</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="toolbar">
+    <button onclick="copyJSON()">📋 نسخ بيانات JSON</button>
+    <button class="secondary" onclick="downloadJSON()">⬇ تنزيل JSON</button>
+    <button class="secondary" onclick="exportProjectPDF()">📄 تصدير تقرير PDF عربي</button>
+    <button class="secondary" onclick="window.print()">🖨️ طباعة</button>
+    <button class="secondary" onclick="toggleRaw()">🔍 عرض/إخفاء JSON الخام</button>
+  </div>
+  <div id="status" class="status"></div>
+
+  <!-- 3D Interactive Facade Visualizer Container -->
+  <div id="facade3dContainer"></div>
+
+  <!-- Detailed Data Sections Container -->
+  <div id="app"></div>
+
+  <pre id="raw" style="display:none"></pre>
+</main>
+
+<script src="assets/js/labels.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/facade-3d.js"></script>
+<script src="assets/js/pdf-export.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
